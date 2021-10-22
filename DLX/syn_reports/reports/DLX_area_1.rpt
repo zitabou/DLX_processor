@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : DLX_MEM_SIZE128_WORD_size32_NREG32
+Version: F-2011.09-SP3
+Date   : Wed Oct 20 11:05:50 2021
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                          119
+Number of nets:                           152
+Number of cells:                            2
+Number of combinational cells:              0
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:       14739.857983
+Noncombinational area:    6929.034223
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          21668.892205
+Total area:                 undefined
+1

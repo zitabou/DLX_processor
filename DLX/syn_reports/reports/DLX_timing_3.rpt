@@ -1,0 +1,126 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX_MEM_SIZE128_WORD_size32_NREG32
+Version: F-2011.09-SP3
+Date   : Wed Oct 20 10:54:20 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.11       0.11 f
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.11 f
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.11 f
+  data_path/dec_stage/decode_logic/U108/ZN (NOR4_X1)      0.11       0.22 r
+  data_path/dec_stage/decode_logic/U17/Z (BUF_X2)         0.05       0.28 r
+  data_path/dec_stage/decode_logic/U106/ZN (NAND2_X1)     0.04       0.31 f
+  data_path/dec_stage/decode_logic/U112/ZN (AND2_X1)      0.04       0.36 f
+  data_path/dec_stage/decode_logic/U9/ZN (NOR2_X1)        0.12       0.47 r
+  data_path/dec_stage/decode_logic/RS2[0] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.47 r
+  data_path/dec_stage/SDU/RSB[0] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.47 r
+  data_path/dec_stage/SDU/U175/ZN (XNOR2_X1)              0.10       0.57 r
+  data_path/dec_stage/SDU/U169/ZN (NAND4_X1)              0.04       0.61 f
+  data_path/dec_stage/SDU/U161/ZN (NAND2_X1)              0.04       0.65 r
+  data_path/dec_stage/SDU/sub_60_aco/B[2] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32_DW01_sub_2)
+                                                          0.00       0.65 r
+  data_path/dec_stage/SDU/sub_60_aco/U65/ZN (INV_X1)      0.03       0.68 f
+  data_path/dec_stage/SDU/sub_60_aco/U21/ZN (OR2_X1)      0.06       0.74 f
+  data_path/dec_stage/SDU/sub_60_aco/U22/ZN (OR2_X1)      0.07       0.81 f
+  data_path/dec_stage/SDU/sub_60_aco/U23/ZN (OR2_X1)      0.07       0.87 f
+  data_path/dec_stage/SDU/sub_60_aco/U24/ZN (OR2_X1)      0.07       0.94 f
+  data_path/dec_stage/SDU/sub_60_aco/U25/ZN (OR2_X1)      0.07       1.01 f
+  data_path/dec_stage/SDU/sub_60_aco/U20/ZN (OR2_X1)      0.07       1.08 f
+  data_path/dec_stage/SDU/sub_60_aco/U30/ZN (NOR2_X1)     0.05       1.13 r
+  data_path/dec_stage/SDU/sub_60_aco/U29/ZN (NAND2_X1)
+                                                          0.04       1.16 f
+  data_path/dec_stage/SDU/sub_60_aco/U17/ZN (OR2_X1)      0.07       1.23 f
+  data_path/dec_stage/SDU/sub_60_aco/U16/ZN (OR2_X1)      0.07       1.30 f
+  data_path/dec_stage/SDU/sub_60_aco/U15/ZN (OR2_X1)      0.07       1.36 f
+  data_path/dec_stage/SDU/sub_60_aco/U14/ZN (OR2_X1)      0.07       1.43 f
+  data_path/dec_stage/SDU/sub_60_aco/U13/ZN (OR2_X1)      0.07       1.50 f
+  data_path/dec_stage/SDU/sub_60_aco/U12/ZN (OR2_X1)      0.07       1.57 f
+  data_path/dec_stage/SDU/sub_60_aco/U11/ZN (OR2_X1)      0.07       1.63 f
+  data_path/dec_stage/SDU/sub_60_aco/U10/ZN (OR2_X1)      0.07       1.70 f
+  data_path/dec_stage/SDU/sub_60_aco/U28/ZN (OR2_X1)      0.07       1.77 f
+  data_path/dec_stage/SDU/sub_60_aco/U27/ZN (OR2_X1)      0.06       1.83 f
+  data_path/dec_stage/SDU/sub_60_aco/U8/ZN (OR2_X1)       0.07       1.90 f
+  data_path/dec_stage/SDU/sub_60_aco/U7/ZN (OR2_X1)       0.07       1.97 f
+  data_path/dec_stage/SDU/sub_60_aco/U6/ZN (OR2_X1)       0.07       2.04 f
+  data_path/dec_stage/SDU/sub_60_aco/U5/ZN (OR2_X1)       0.07       2.10 f
+  data_path/dec_stage/SDU/sub_60_aco/U4/ZN (OR2_X1)       0.07       2.17 f
+  data_path/dec_stage/SDU/sub_60_aco/U3/ZN (OR2_X1)       0.07       2.24 f
+  data_path/dec_stage/SDU/sub_60_aco/U2/ZN (OR2_X1)       0.07       2.31 f
+  data_path/dec_stage/SDU/sub_60_aco/U1/ZN (OR2_X1)       0.07       2.37 f
+  data_path/dec_stage/SDU/sub_60_aco/U32/ZN (XNOR2_X1)
+                                                          0.06       2.44 f
+  data_path/dec_stage/SDU/sub_60_aco/DIFF[30] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32_DW01_sub_2)
+                                                          0.00       2.44 f
+  data_path/dec_stage/SDU/U85/ZN (AOI222_X1)              0.07       2.51 r
+  data_path/dec_stage/SDU/U84/ZN (NAND2_X1)               0.03       2.54 f
+  data_path/dec_stage/SDU/NPC_out[30] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       2.54 f
+  data_path/dec_stage/stall_NPC[30] (DEC)                 0.00       2.54 f
+  data_path/fetch_stage/hazard_PC[30] (FETCH)             0.00       2.54 f
+  data_path/fetch_stage/MUX/B[30] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       2.54 f
+  data_path/fetch_stage/MUX/MUXES_30/B (MUX21_500)        0.00       2.54 f
+  data_path/fetch_stage/MUX/MUXES_30/U1/ZN (AOI22_X1)     0.06       2.61 r
+  data_path/fetch_stage/MUX/MUXES_30/U2/ZN (INV_X1)       0.03       2.64 f
+  data_path/fetch_stage/MUX/MUXES_30/Y (MUX21_500)        0.00       2.64 f
+  data_path/fetch_stage/MUX/Y[30] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       2.64 f
+  data_path/fetch_stage/add_37/A[30] (FETCH_DW01_add_0)
+                                                          0.00       2.64 f
+  data_path/fetch_stage/add_37/U1_30/CO (FA_X1)           0.11       2.75 f
+  data_path/fetch_stage/add_37/U1/ZN (XNOR2_X2)           0.07       2.83 r
+  data_path/fetch_stage/add_37/U2/ZN (INV_X2)             0.04       2.86 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_0)
+                                                          0.00       2.86 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       2.86 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       2.86 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       2.86 f
+  data_path/MUX/MUXES_31/U2/ZN (AOI22_X1)                 0.05       2.91 r
+  data_path/MUX/MUXES_31/U1/ZN (INV_X1)                   0.02       2.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       2.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       2.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       2.95 f
+  data arrival time                                                  2.95
+
+  clock CLK (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       3.00 r
+  library setup time                                     -0.04       2.96
+  data required time                                                 2.96
+  --------------------------------------------------------------------------
+  data required time                                                 2.96
+  data arrival time                                                 -2.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

@@ -1,0 +1,204 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX_MEM_SIZE128_WORD_size32_NREG32
+Version: F-2011.09-SP3
+Date   : Wed Oct 20 11:05:46 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: control_unit/cw4_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/ALU_reg_reg[25]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_unit/cw4_reg[1]/CK (DFFR_X1)                    0.00       0.00 r
+  control_unit/cw4_reg[1]/QN (DFFR_X1)                    0.07       0.07 f
+  control_unit/U66/ZN (INV_X1)                            0.04       0.10 r
+  control_unit/S3 (hardwired_CU)                          0.00       0.10 r
+  data_path/S3 (DataPath_MEM_SIZE128_WORD_size32_NREG32)
+                                                          0.00       0.10 r
+  data_path/wb_stage/S3 (WB)                              0.00       0.10 r
+  data_path/wb_stage/MUX/SEL (MUX21_GENERIC_NBIT32_2)     0.00       0.10 r
+  data_path/wb_stage/MUX/U2/Z (CLKBUF_X3)                 0.06       0.16 r
+  data_path/wb_stage/MUX/MUXES_31/S (MUX21_425)           0.00       0.16 r
+  data_path/wb_stage/MUX/MUXES_31/U3/ZN (INV_X1)          0.04       0.20 f
+  data_path/wb_stage/MUX/MUXES_31/U1/ZN (AOI22_X1)        0.05       0.25 r
+  data_path/wb_stage/MUX/MUXES_31/U2/ZN (INV_X1)          0.03       0.28 f
+  data_path/wb_stage/MUX/MUXES_31/Y (MUX21_425)           0.00       0.28 f
+  data_path/wb_stage/MUX/Y[31] (MUX21_GENERIC_NBIT32_2)
+                                                          0.00       0.28 f
+  data_path/wb_stage/output[31] (WB)                      0.00       0.28 f
+  data_path/exe_stage/WB_out[31] (EXE)                    0.00       0.28 f
+  data_path/exe_stage/FW_MUX1/D[31] (MUX41_GENERIC_NBIT32_0)
+                                                          0.00       0.28 f
+  data_path/exe_stage/FW_MUX1/MUXES_31/D (MUX41_137)      0.00       0.28 f
+  data_path/exe_stage/FW_MUX1/MUXES_31/U5/ZN (AOI22_X1)
+                                                          0.05       0.33 r
+  data_path/exe_stage/FW_MUX1/MUXES_31/U1/ZN (OAI211_X1)
+                                                          0.06       0.39 f
+  data_path/exe_stage/FW_MUX1/MUXES_31/Y (MUX41_137)      0.00       0.39 f
+  data_path/exe_stage/FW_MUX1/Y[31] (MUX41_GENERIC_NBIT32_0)
+                                                          0.00       0.39 f
+  data_path/exe_stage/EXUx/DATA1[31] (EXU_N32)            0.00       0.39 f
+  data_path/exe_stage/EXUx/ALU1/DATA1[31] (ALU_N32)       0.00       0.39 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/R1[31] (shifter_NBITS32)
+                                                          0.00       0.39 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/R1[31] (mask_generator_NBITS32)
+                                                          0.00       0.39 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/U57/Z (BUF_X1)
+                                                          0.06       0.44 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_shift_type/B[3] (MUX21_GENERIC_NBIT8_0)
+                                                          0.00       0.44 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_shift_type/MUXES_3/B (MUX21_357)
+                                                          0.00       0.44 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_shift_type/MUXES_3/U3/ZN (AOI22_X1)
+                                                          0.05       0.50 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_shift_type/MUXES_3/U2/ZN (INV_X1)
+                                                          0.03       0.53 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_shift_type/MUXES_3/Y (MUX21_357)
+                                                          0.00       0.53 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_shift_type/Y[3] (MUX21_GENERIC_NBIT8_0)
+                                                          0.00       0.53 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_0_4/A[3] (MUX41_GENERIC_NBIT8_0)
+                                                          0.00       0.53 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_0_4/MUXES_3/A (MUX41_29)
+                                                          0.00       0.53 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_0_4/MUXES_3/U2/ZN (NAND2_X1)
+                                                          0.03       0.56 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_0_4/MUXES_3/U5/ZN (OAI211_X1)
+                                                          0.05       0.60 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_0_4/MUXES_3/Y (MUX41_29)
+                                                          0.00       0.60 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_0_4/Y[3] (MUX41_GENERIC_NBIT8_0)
+                                                          0.00       0.60 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_1_3/A[3] (MUX21_GENERIC_NBIT8_9)
+                                                          0.00       0.60 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_1_3/MUXES_3/A (MUX21_293)
+                                                          0.00       0.60 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_1_3/MUXES_3/U1/ZN (AOI22_X1)
+                                                          0.05       0.66 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_1_3/MUXES_3/U2/ZN (INV_X1)
+                                                          0.04       0.69 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_1_3/MUXES_3/Y (MUX21_293)
+                                                          0.00       0.69 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_1_3/Y[3] (MUX21_GENERIC_NBIT8_9)
+                                                          0.00       0.69 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_2_4/C[3] (MUX41_GENERIC_NBIT8_2)
+                                                          0.00       0.69 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_2_4/MUXES_3/C (MUX41_13)
+                                                          0.00       0.69 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_2_4/MUXES_3/U5/ZN (AOI22_X1)
+                                                          0.06       0.76 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_2_4/MUXES_3/U2/ZN (OAI211_X1)
+                                                          0.04       0.80 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_2_4/MUXES_3/Y (MUX41_13)
+                                                          0.00       0.80 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_MSB_2_4/Y[3] (MUX41_GENERIC_NBIT8_2)
+                                                          0.00       0.80 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_3_3/A[3] (MUX21_GENERIC_NBIT8_1)
+                                                          0.00       0.80 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_3_3/MUXES_3/A (MUX21_229)
+                                                          0.00       0.80 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_3_3/MUXES_3/U1/ZN (AOI22_X1)
+                                                          0.05       0.85 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_3_3/MUXES_3/U2/ZN (INV_X1)
+                                                          0.03       0.88 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_3_3/MUXES_3/Y (MUX21_229)
+                                                          0.00       0.88 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/MUX_mask_3_3/Y[3] (MUX21_GENERIC_NBIT8_1)
+                                                          0.00       0.88 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_gen/mask24[27] (mask_generator_NBITS32)
+                                                          0.00       0.88 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_mask_select/D[27] (MUX41_GENERIC_NBIT40)
+                                                          0.00       0.88 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_mask_select/MUXES_27/D (MUX41_45)
+                                                          0.00       0.88 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_mask_select/MUXES_27/U4/ZN (AOI22_X1)
+                                                          0.05       0.93 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_mask_select/MUXES_27/U3/ZN (OAI211_X1)
+                                                          0.06       0.98 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_mask_select/MUXES_27/Y (MUX41_45)
+                                                          0.00       0.98 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_mask_select/Y[27] (MUX41_GENERIC_NBIT40)
+                                                          0.00       0.98 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_shift/R1[27] (mask_shifter_NBITS40)
+                                                          0.00       0.98 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_shift/U168/ZN (NAND2_X1)
+                                                          0.06       1.04 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_shift/U384/ZN (NAND2_X1)
+                                                          0.04       1.08 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/mask_shift/mask_sh6[25] (mask_shifter_NBITS40)
+                                                          0.00       1.08 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/G[25] (MUX81_GENERIC_NBIT32)
+                                                          0.00       1.08 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/G (MUX81_7)
+                                                          0.00       1.08 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/U9/ZN (NAND2_X1)
+                                                          0.03       1.11 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/U19/ZN (NAND4_X1)
+                                                          0.04       1.15 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/U11/ZN (AOI22_X1)
+                                                          0.05       1.20 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/U18/ZN (OAI21_X1)
+                                                          0.03       1.23 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/U13/ZN (AOI22_X1)
+                                                          0.05       1.28 r
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/U17/ZN (NAND2_X1)
+                                                          0.03       1.31 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/MUXES_25/Y (MUX81_7)
+                                                          0.00       1.31 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/MUX_shift_select/Y[25] (MUX81_GENERIC_NBIT32)
+                                                          0.00       1.31 f
+  data_path/exe_stage/EXUx/ALU1/alu_shifter/Rout[25] (shifter_NBITS32)
+                                                          0.00       1.31 f
+  data_path/exe_stage/EXUx/ALU1/U193/ZN (AOI222_X1)       0.07       1.38 r
+  data_path/exe_stage/EXUx/ALU1/U224/ZN (INV_X1)          0.03       1.41 f
+  data_path/exe_stage/EXUx/ALU1/OUTALU[25] (ALU_N32)      0.00       1.41 f
+  data_path/exe_stage/EXUx/OUTPUT_MUX/A[25] (MUX21_GENERIC_NBIT32_1)
+                                                          0.00       1.41 f
+  data_path/exe_stage/EXUx/OUTPUT_MUX/MUXES_25/A (MUX21_399)
+                                                          0.00       1.41 f
+  data_path/exe_stage/EXUx/OUTPUT_MUX/MUXES_25/U1/ZN (AOI22_X1)
+                                                          0.05       1.46 r
+  data_path/exe_stage/EXUx/OUTPUT_MUX/MUXES_25/U2/ZN (INV_X1)
+                                                          0.02       1.48 f
+  data_path/exe_stage/EXUx/OUTPUT_MUX/MUXES_25/Y (MUX21_399)
+                                                          0.00       1.48 f
+  data_path/exe_stage/EXUx/OUTPUT_MUX/Y[25] (MUX21_GENERIC_NBIT32_1)
+                                                          0.00       1.48 f
+  data_path/exe_stage/EXUx/OUTPUT[25] (EXU_N32)           0.00       1.48 f
+  data_path/exe_stage/output[25] (EXE)                    0.00       1.48 f
+  data_path/ALU_reg_reg[25]/D (DFFR_X1)                   0.01       1.49 f
+  data arrival time                                                  1.49
+
+  clock CLK (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  data_path/ALU_reg_reg[25]/CK (DFFR_X1)                  0.00       1.00 r
+  library setup time                                     -0.04       0.96
+  data required time                                                 0.96
+  --------------------------------------------------------------------------
+  data required time                                                 0.96
+  data arrival time                                                 -1.49
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.53
+
+
+1

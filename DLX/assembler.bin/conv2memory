@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# od - dump files in octal and other formats
+
+# -w[BYTES], --width[=BYTES]
+             # output BYTES bytes per output line; 32 is implied when BYTES  is
+             # not specified
+
+# -t, --format=TYPE,    select output format or formats
+
+# -x     same as -t x2, select hexadecimal 2-byte units
+# -c     same as -t c,  select printable characters or backslash escapes
+
+# x[SIZE] hexadecimal, SIZE bytes per integer
+#SIZE  is  a  number.   For  TYPE  in  [doux],  SIZE  may  also be C for
+#       sizeof(char),  S  for  sizeof(short),  I  for  sizeof(int)  or  L   for
+#       sizeof(long).   If  TYPE  is f, SIZE may also be F for sizeof(float), D
+#       for sizeof(double) or L for sizeof(long double).
+
+
+
+od --width=4 -t xC -v $1 | awk '{print $2$3$4$5}'
+

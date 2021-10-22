@@ -1,0 +1,5 @@
+vcom 000-globals.vhd
+vcom 3to1_nand.vhd
+vcom 4to1_nand.vhd
+vcom t2_logicals.vhd
+vcom t2_logicals_tb.vhd

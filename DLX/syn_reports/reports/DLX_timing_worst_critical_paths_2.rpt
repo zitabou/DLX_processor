@@ -1,0 +1,924 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : DLX_MEM_SIZE128_WORD_size32_NREG32
+Version: F-2011.09-SP3
+Date   : Wed Oct 20 10:59:31 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U4/ZN (OAI221_X1)      0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[4] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[4] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U20/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.07 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.07 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.07 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.07 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.07 r
+  data_path/fetch_stage/MUX/U1/Z (CLKBUF_X3)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/S (MUX21_524)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/U1/Z (MUX2_X1)        0.10       1.25 r
+  data_path/fetch_stage/MUX/MUXES_6/Y (MUX21_524)         0.00       1.25 r
+  data_path/fetch_stage/MUX/Y[6] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.25 r
+  data_path/fetch_stage/add_37/A[6] (FETCH_DW01_add_2)
+                                                          0.00       1.25 r
+  data_path/fetch_stage/add_37/U13/ZN (AND4_X2)           0.08       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.68 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U4/ZN (OAI221_X1)      0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[4] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[4] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U20/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.07 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.07 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.07 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.07 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.07 r
+  data_path/fetch_stage/MUX/U1/Z (CLKBUF_X3)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/S (MUX21_524)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/U1/Z (MUX2_X1)        0.10       1.25 r
+  data_path/fetch_stage/MUX/MUXES_6/Y (MUX21_524)         0.00       1.25 r
+  data_path/fetch_stage/MUX/Y[6] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.25 r
+  data_path/fetch_stage/add_37/A[6] (FETCH_DW01_add_2)
+                                                          0.00       1.25 r
+  data_path/fetch_stage/add_37/U13/ZN (AND4_X2)           0.08       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.68 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U4/ZN (OAI221_X1)      0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[4] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[4] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U20/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.07 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.07 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.07 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.07 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.07 r
+  data_path/fetch_stage/MUX/U3/Z (CLKBUF_X1)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/S (MUX21_527)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/U1/Z (MUX2_X1)        0.08       1.24 r
+  data_path/fetch_stage/MUX/MUXES_3/Y (MUX21_527)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[3] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[3] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U78/ZN (INV_X1)            0.03       1.26 f
+  data_path/fetch_stage/add_37/U38/ZN (NOR2_X1)           0.05       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.68 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U4/ZN (OAI221_X1)      0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[4] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[4] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U20/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.07 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.07 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.07 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.07 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.07 r
+  data_path/fetch_stage/MUX/U3/Z (CLKBUF_X1)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/S (MUX21_527)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/U1/Z (MUX2_X1)        0.08       1.24 r
+  data_path/fetch_stage/MUX/MUXES_3/Y (MUX21_527)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[3] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[3] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U78/ZN (INV_X1)            0.03       1.26 f
+  data_path/fetch_stage/add_37/U38/ZN (NOR2_X1)           0.05       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.68 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U101/ZN (OAI221_X1)
+                                                          0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[0] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[0] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U18/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.06 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.06 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.06 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.06 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.06 r
+  data_path/fetch_stage/MUX/U1/Z (CLKBUF_X3)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/S (MUX21_524)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/U1/Z (MUX2_X1)        0.10       1.24 r
+  data_path/fetch_stage/MUX/MUXES_6/Y (MUX21_524)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[6] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[6] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U13/ZN (AND4_X2)           0.08       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.68 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U101/ZN (OAI221_X1)
+                                                          0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[0] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[0] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U18/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.06 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.06 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.06 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.06 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.06 r
+  data_path/fetch_stage/MUX/U1/Z (CLKBUF_X3)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/S (MUX21_524)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/U1/Z (MUX2_X1)        0.10       1.24 r
+  data_path/fetch_stage/MUX/MUXES_6/Y (MUX21_524)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[6] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[6] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U13/ZN (AND4_X2)           0.08       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.68 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U101/ZN (OAI221_X1)
+                                                          0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[0] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[0] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U18/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.06 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.06 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.06 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.06 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.06 r
+  data_path/fetch_stage/MUX/U3/Z (CLKBUF_X1)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/S (MUX21_527)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/U1/Z (MUX2_X1)        0.08       1.24 r
+  data_path/fetch_stage/MUX/MUXES_3/Y (MUX21_527)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[3] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[3] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U78/ZN (INV_X1)            0.03       1.26 f
+  data_path/fetch_stage/add_37/U38/ZN (NOR2_X1)           0.05       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.67 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U101/ZN (OAI221_X1)
+                                                          0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[0] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[0] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U18/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.87 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.06 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.06 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.06 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.06 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.06 r
+  data_path/fetch_stage/MUX/U3/Z (CLKBUF_X1)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/S (MUX21_527)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_3/U1/Z (MUX2_X1)        0.08       1.24 r
+  data_path/fetch_stage/MUX/MUXES_3/Y (MUX21_527)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[3] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[3] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U78/ZN (INV_X1)            0.03       1.26 f
+  data_path/fetch_stage/add_37/U38/ZN (NOR2_X1)           0.05       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.40 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.67 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U4/ZN (OAI221_X1)      0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[4] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[4] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U20/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.86 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.06 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.06 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.06 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.06 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.06 r
+  data_path/fetch_stage/MUX/U1/Z (CLKBUF_X3)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/S (MUX21_524)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/U1/Z (MUX2_X1)        0.10       1.24 r
+  data_path/fetch_stage/MUX/MUXES_6/Y (MUX21_524)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[6] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[6] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U13/ZN (AND4_X2)           0.08       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.39 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.67 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: data_path/IR_reg_reg[30]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: data_path/PC_reg_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_MEM_SIZE128_WORD_size32_NREG32
+                     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  data_path/IR_reg_reg[30]/CK (DFFS_X2)                   0.00       0.00 r
+  data_path/IR_reg_reg[30]/Q (DFFS_X2)                    0.13       0.13 r
+  data_path/dec_stage/instr[30] (DEC)                     0.00       0.13 r
+  data_path/dec_stage/decode_logic/instr[30] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.13 r
+  data_path/dec_stage/decode_logic/U43/ZN (INV_X1)        0.05       0.19 f
+  data_path/dec_stage/decode_logic/U12/ZN (AND3_X1)       0.06       0.24 f
+  data_path/dec_stage/decode_logic/U11/ZN (NAND3_X4)      0.09       0.34 r
+  data_path/dec_stage/decode_logic/U21/ZN (AND2_X1)       0.07       0.41 r
+  data_path/dec_stage/decode_logic/U99/ZN (NAND2_X1)      0.05       0.45 f
+  data_path/dec_stage/decode_logic/U4/ZN (OAI221_X1)      0.11       0.56 r
+  data_path/dec_stage/decode_logic/RD[4] (dec_logic_WORD_size32_NREG32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/RD[4] (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       0.56 r
+  data_path/dec_stage/SDU/U20/ZN (XNOR2_X1)               0.07       0.63 r
+  data_path/dec_stage/SDU/U103/ZN (NAND3_X1)              0.05       0.68 f
+  data_path/dec_stage/SDU/U31/ZN (OAI33_X1)               0.09       0.77 r
+  data_path/dec_stage/SDU/U107/ZN (OAI33_X1)              0.05       0.82 f
+  data_path/dec_stage/SDU/U22/ZN (AND2_X1)                0.05       0.86 f
+  data_path/dec_stage/SDU/U48/ZN (AND2_X1)                0.04       0.91 f
+  data_path/dec_stage/SDU/U112/ZN (OAI22_X1)              0.06       0.96 r
+  data_path/dec_stage/SDU/U113/ZN (INV_X1)                0.03       1.00 f
+  data_path/dec_stage/SDU/U9/ZN (OAI21_X1)                0.07       1.06 r
+  data_path/dec_stage/SDU/PC_sel (stall_detection_unit_op_code_size6_func_size11_PC_reg_size32_reg_file_size32)
+                                                          0.00       1.06 r
+  data_path/dec_stage/PC_sel (DEC)                        0.00       1.06 r
+  data_path/fetch_stage/PC_sel (FETCH)                    0.00       1.06 r
+  data_path/fetch_stage/MUX/SEL (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.06 r
+  data_path/fetch_stage/MUX/U1/Z (CLKBUF_X3)              0.09       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/S (MUX21_524)         0.00       1.15 r
+  data_path/fetch_stage/MUX/MUXES_6/U1/Z (MUX2_X1)        0.10       1.24 r
+  data_path/fetch_stage/MUX/MUXES_6/Y (MUX21_524)         0.00       1.24 r
+  data_path/fetch_stage/MUX/Y[6] (MUX21_GENERIC_NBIT32_4)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/A[6] (FETCH_DW01_add_2)
+                                                          0.00       1.24 r
+  data_path/fetch_stage/add_37/U13/ZN (AND4_X2)           0.08       1.32 r
+  data_path/fetch_stage/add_37/U27/ZN (NAND2_X1)          0.03       1.35 f
+  data_path/fetch_stage/add_37/U73/ZN (NOR2_X1)           0.04       1.39 r
+  data_path/fetch_stage/add_37/U12/ZN (AND4_X1)           0.07       1.46 r
+  data_path/fetch_stage/add_37/U7/ZN (AND2_X1)            0.04       1.50 r
+  data_path/fetch_stage/add_37/U8/ZN (AND2_X2)            0.05       1.55 r
+  data_path/fetch_stage/add_37/U4/ZN (AND2_X1)            0.05       1.60 r
+  data_path/fetch_stage/add_37/U70/ZN (NAND2_X1)          0.04       1.64 f
+  data_path/fetch_stage/add_37/U76/ZN (NOR2_X1)           0.04       1.67 r
+  data_path/fetch_stage/add_37/U3/ZN (AND2_X1)            0.05       1.73 r
+  data_path/fetch_stage/add_37/U17/ZN (AND2_X1)           0.05       1.78 r
+  data_path/fetch_stage/add_37/U22/ZN (NAND2_X1)          0.03       1.81 f
+  data_path/fetch_stage/add_37/U21/ZN (XNOR2_X1)          0.06       1.87 f
+  data_path/fetch_stage/add_37/SUM[31] (FETCH_DW01_add_2)
+                                                          0.00       1.87 f
+  data_path/fetch_stage/NPC[31] (FETCH)                   0.00       1.87 f
+  data_path/MUX/A[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.87 f
+  data_path/MUX/MUXES_31/A (MUX21_563)                    0.00       1.87 f
+  data_path/MUX/MUXES_31/U1/Z (MUX2_X1)                   0.07       1.94 f
+  data_path/MUX/MUXES_31/Y (MUX21_563)                    0.00       1.94 f
+  data_path/MUX/Y[31] (MUX21_GENERIC_NBIT32_0)            0.00       1.94 f
+  data_path/PC_reg_reg[31]/D (DFFR_X1)                    0.01       1.95 f
+  data arrival time                                                  1.95
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  data_path/PC_reg_reg[31]/CK (DFFR_X1)                   0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

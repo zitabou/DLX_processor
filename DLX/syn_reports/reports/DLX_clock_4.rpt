@@ -1,0 +1,21 @@
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : clocks
+Design : DLX_MEM_SIZE128_WORD_size32_NREG32
+Version: F-2011.09-SP3
+Date   : Wed Oct 20 10:44:21 2021
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLK              4.00   {0 2}                         {CLK}
+--------------------------------------------------------------------------------
+1
